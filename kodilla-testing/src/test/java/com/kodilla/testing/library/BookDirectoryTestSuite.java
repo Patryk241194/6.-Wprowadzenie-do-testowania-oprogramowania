@@ -88,7 +88,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    void listBooksInHandsOfWhenUserHasNotBorrowed() {
+    void testListBooksInHandsOfWhenUserHasNotBorrowed() {
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser user1 = new LibraryUser("Jan", "Kowalski", "90010134234");
@@ -101,7 +101,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    void listBooksInHandsOfWhenUserHasOneBookBorrowed() {
+    void testListBooksInHandsOfWhenUserHasOneBookBorrowed() {
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser user1 = new LibraryUser("Jan", "Kowalski", "90010134234");
@@ -120,7 +120,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    void listBooksInHandsOfWhenUserHasFiveBooksBorrowed() {
+    void testListBooksInHandsOfWhenUserHasFiveBooksBorrowed() {
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser user1 = new LibraryUser("Jan", "Kowalski", "90010134234");
