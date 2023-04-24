@@ -57,6 +57,20 @@ public class WeatherForecastTestSuite {
 
         //Then
         Assertions.assertEquals(expectedResult, averageTemperature, 0.01);
+
+    }
+
+    @Test
+    void testCalculateAverageTemperatureWithoutDataWithMock() {
+        //Given
+        WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
+
+        //When
+        Map<String, Double> emptyMap = new HashMap<>();
+        when(temperaturesMock.getTemperatures()).thenReturn(emptyMap);
+
+        //Then
+        Assertions.assertThrows(ArithmeticException.class, () -> weatherForecast.calculateAverageTemperature());
     }
 
     @Test
@@ -71,6 +85,19 @@ public class WeatherForecastTestSuite {
 
         //Then
         Assertions.assertEquals(expectedResult, averageTemperature);
+    }
+
+    @Test
+    void testCalculateMedianTemperatureWithoutDataWithMock() {
+        //Given
+        WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
+
+        //When
+        Map<String, Double> emptyMap = new HashMap<>();
+        when(temperaturesMock.getTemperatures()).thenReturn(emptyMap);
+
+        //Then
+        Assertions.assertThrows(ArithmeticException.class, () -> weatherForecast.calculateMedianTemperature());
     }
 
 }
