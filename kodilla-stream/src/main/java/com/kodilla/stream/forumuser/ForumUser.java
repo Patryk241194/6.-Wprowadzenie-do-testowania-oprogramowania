@@ -39,14 +39,14 @@ public class ForumUser {
 
     public int getUserAge() {
         LocalDate today = LocalDate.now();
-        int UserAge = today.getYear() - dateOfBirth.getYear();
+        int userAge = today.getYear() - dateOfBirth.getYear();
         if (today.getMonthValue() < dateOfBirth.getMonthValue()) {
-            UserAge--;
+            userAge--;
         } else if (today.getMonthValue() == dateOfBirth.getMonthValue()
                 && today.getDayOfMonth() < dateOfBirth.getDayOfMonth()) {
-            UserAge--;
+            userAge--;
         }
-        return UserAge;
+        return userAge;
     }
 
     public int getNumberOfPosts() {
