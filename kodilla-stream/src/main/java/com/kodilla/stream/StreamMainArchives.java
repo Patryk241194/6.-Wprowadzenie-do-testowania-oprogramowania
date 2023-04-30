@@ -56,7 +56,7 @@ public class StreamMainArchives {
         BookDirectory theBookDirectory = new BookDirectory();
 
         // Kolektor Collectors.toList()
-        List<Book> theResultListOfBooks = theBookDirectory.getTheBookList().stream()
+        List<Book> theResultListOfBooks = theBookDirectory.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .collect(Collectors.toList());
 
@@ -65,7 +65,7 @@ public class StreamMainArchives {
                 .forEach(System.out::println);
 
         // Kolektor Collectors.toMap()
-        Map<String, Book> theResultMapOfBooks = theBookDirectory.getTheBookList().stream()
+        Map<String, Book> theResultMapOfBooks = theBookDirectory.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .collect(Collectors.toMap(Book::getSignature, book -> book));
 
@@ -75,7 +75,7 @@ public class StreamMainArchives {
                 .forEach(System.out::println);
 
         // Kolektor Collectors.joining()
-        String theResultStringOfBooks = theBookDirectory.getTheBookList().stream()
+        String theResultStringOfBooks = theBookDirectory.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .map(Book::toString)
                 .collect(Collectors.joining(",\n", "<<", ">>"));

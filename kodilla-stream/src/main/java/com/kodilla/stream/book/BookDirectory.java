@@ -24,7 +24,7 @@ public class BookDirectory {
                 2009, "0007"));
     }
 
-    public List<Book> getTheBookList() {
+    public List<Book> getList() {
         return new ArrayList<>(theBookList);
     }
 }

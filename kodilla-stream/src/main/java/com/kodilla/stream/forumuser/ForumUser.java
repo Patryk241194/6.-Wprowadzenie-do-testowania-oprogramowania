@@ -38,9 +38,9 @@ public class ForumUser {
         return dateOfBirth;
     }
 
-    public Period getUserAge() {
+    public int getUserAge() {
         LocalDate today = LocalDate.now();
-        return Period.between(dateOfBirth, today);
+        return Period.between(dateOfBirth, today).getYears();
     }
 
     public int getNumberOfPosts() {
