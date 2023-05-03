@@ -1,19 +1,23 @@
 package com.kodilla.rps;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class User {
 
-    private String username;
+    private final String username;
     private int numberOfRounds;
     private int numberOfRoundsWon;
 
     public User(Scanner scanner) {
-        String name;
-        int roundsToWin;
+        this.username = checkTheName(scanner);
+        this.numberOfRoundsWon = 0;
+    }
 
+    private String checkTheName(Scanner scanner) {
+        String name;
         do {
-            System.out.println("Please enter your name:");
+            System.out.print("Please enter your name: ");
             name = scanner.nextLine().trim(); // remove whitespace from start and end
 
 //          if-condition (name.isEmpty() || name.matches("\\s+") checks if the string is empty or consists only of whitespace.
@@ -23,29 +27,19 @@ public class User {
             }
         } while (name.isEmpty() || name.matches("\\s+"));
 
-        do {
-            System.out.println("Please enter the number of rounds to win:");
-            roundsToWin = scanner.nextInt();
-            if (roundsToWin <= 0) {
-                System.out.println("Invalid input. Please enter a value higher than 0.");
-            }
-        } while (roundsToWin <= 0);
-
-        this.username = name;
-        this.numberOfRounds = roundsToWin;
-        this.numberOfRoundsWon = 0;
+        return name;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public int getNumberOfRounds() {
-        return numberOfRounds;
-    }
-
     public int getNumberOfRoundsWon() {
         return numberOfRoundsWon;
+    }
+
+    public void setNumberOfRoundsWon(int numberOfRoundsWon) {
+        this.numberOfRoundsWon = numberOfRoundsWon;
     }
 
     @Override

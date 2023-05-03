@@ -5,5 +5,6 @@ public interface Game {
     void play();
     void displayStartScreen();
     void showRules();
+    void runGameMechanics();
 
 }
