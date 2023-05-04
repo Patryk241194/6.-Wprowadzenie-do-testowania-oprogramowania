@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class User {
 
     private final String username;
-    private int numberOfRounds;
     private int numberOfRoundsWon;
 
     public User(Scanner scanner) {
@@ -46,7 +45,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +
-                ", numberOfRounds=" + numberOfRounds +
                 ", numberOfRoundsWon=" + numberOfRoundsWon +
                 '}';
     }
