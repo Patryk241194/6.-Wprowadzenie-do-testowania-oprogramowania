@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FlightRunnerTestSuite {
 
     @Test
-    public void testProbablyIWillThrowException() {
+    public void testFindFlight() {
         // given
         FlightRunner flightRunner = new FlightRunner();
 

@@ -1,7 +1,5 @@
 package com.kodilla.exception.test;
 
-import com.kodilla.exception.nullpointer.MessageNotSentException;
-
 import java.util.HashMap;
 import java.util.Map;
 
