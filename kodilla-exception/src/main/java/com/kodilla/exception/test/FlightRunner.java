@@ -21,8 +21,8 @@ public class FlightRunner {
         String origin = flight.getDepartureAirport();
         String destination = flight.getArrivalAirport();
 
-        if (mapOfAirports.get(origin) && mapOfAirports.get(destination) &&
-                !origin.equals(destination)) {
+        if (mapOfAirports.containsKey(origin) && mapOfAirports.containsKey(destination) &&
+                mapOfAirports.get(origin) && mapOfAirports.get(destination) && !origin.equals(destination)) {
             System.out.println("Departure from " + origin +
                     " to " + destination + " is currently available");
         } else {
@@ -33,6 +33,7 @@ public class FlightRunner {
 
     public static void main(String[] args) {
         FlightRunner flightRunner = new FlightRunner();
+
 
         try {
             flightRunner.findFlight(new Flight("CDG", "PEK"));
