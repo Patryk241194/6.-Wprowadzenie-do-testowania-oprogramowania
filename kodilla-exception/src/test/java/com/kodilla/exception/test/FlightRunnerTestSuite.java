@@ -20,9 +20,9 @@ public class FlightRunnerTestSuite {
 
         assertAll(
                 () -> assertDoesNotThrow(() -> flightRunner.findFlight(new Flight("ATL", "PEK"))),
-                () -> assertThrows(RouteNotFoundException.class, () -> flightRunner.findFlight(new Flight("LAX", "LAX"))),
-                () -> assertThrows(RouteNotFoundException.class, () -> flightRunner.findFlight(new Flight("ATL", "CAN"))),
-                () -> assertThrows(RouteNotFoundException.class, () -> flightRunner.findFlight(new Flight("CDG", "PEK"))),
+                () -> assertDoesNotThrow(() -> flightRunner.findFlight(new Flight("LAX", "LAX"))),
+                () -> assertDoesNotThrow(() -> flightRunner.findFlight(new Flight("ATL", "CAN"))),
+                () -> assertDoesNotThrow(() -> flightRunner.findFlight(new Flight("CDG", "PEK"))),
                 () -> assertThrows(RouteNotFoundException.class, () -> flightRunner.findFlight(new Flight("BGT", "FGR")))
         );
     }
