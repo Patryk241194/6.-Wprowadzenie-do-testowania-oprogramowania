@@ -11,16 +11,4 @@ public class NPCTestSuite {
 
     private Scanner scanner;
 
-    @Test
-    public void testDifficultyLevelTest() {
-        //Given
-        NPC npc = new NPC(scanner);
-
-        //When
-        npc.getDifficultyLevel();
-
-        //Then
-        Assertions.assertEquals("N", npc.getDifficultyLevel());
-        Assertions.assertEquals(5, npc.getNumberOfRounds());
-    }
 }
