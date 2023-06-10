@@ -18,3 +18,5 @@ public class Main {
     }
 }
 
+// Metoda main() dla zadania 13.2. w PurchaseApp
+
