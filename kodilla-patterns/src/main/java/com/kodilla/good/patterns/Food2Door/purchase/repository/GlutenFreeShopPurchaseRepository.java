@@ -8,10 +8,10 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HealthyShopPurchaseRepository implements PurchaseRepository {
+public class GlutenFreeShopPurchaseRepository implements PurchaseRepository {
     private Map<Product, Map<LocalDateTime, Integer>> purchaseDatabase;
 
-    public HealthyShopPurchaseRepository() {
+    public GlutenFreeShopPurchaseRepository() {
         this.purchaseDatabase = new HashMap<>();
     }
 

@@ -16,13 +16,7 @@ public class ExtraFoodShopPurchaseRepository implements PurchaseRepository {
     }
 
     @Override
-    public void createPurchase(Supplier supplier, LocalDateTime purchaseTime, Map<Product, Integer> products, User user) {
-        for (Map.Entry<Product, Integer> entry : products.entrySet()) {
-            Product product = entry.getKey();
-            int quantity = entry.getValue();
-            Map<LocalDateTime, Integer> productPurchases = purchaseDatabase.getOrDefault(product, new HashMap<>());
-            productPurchases.put(purchaseTime, quantity);
-            purchaseDatabase.put(product, productPurchases);
-        }
+    public Map<Product, Map<LocalDateTime, Integer>> getPurchaseDatabase() {
+        return purchaseDatabase;
     }
 }

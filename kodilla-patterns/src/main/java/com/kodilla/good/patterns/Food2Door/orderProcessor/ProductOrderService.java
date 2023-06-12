@@ -25,7 +25,7 @@ public class ProductOrderService {
 
         if (isPurchased) {
             informationService.inform(purchaseRequest.getUser());
-            purchaseRepository.createPurchase(purchaseRequest.getSupplier(), purchaseRequest.getPurchaseTime(),
+            purchaseRepository.createPurchaseDatabase(purchaseRequest.getSupplier(), purchaseRequest.getPurchaseTime(),
                     purchaseRequest.getProducts(), purchaseRequest.getUser());
             return new PurchaseDto(purchaseRequest.getUser(), true);
         } else {
