@@ -1,6 +1,6 @@
-package com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts;
+package com.kodilla.good.patterns.Food2Door.products.productcatalog;
 
-public class GlutenFreeShopList {
+public class HealthyShopList {
 
     public static final String CATEGORY_1 = "Category 1";
     public static final String CATEGORY_2 = "Category 2";

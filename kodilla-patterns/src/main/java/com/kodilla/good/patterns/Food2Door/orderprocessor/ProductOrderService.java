@@ -1,6 +1,6 @@
-package com.kodilla.good.patterns.Food2Door.orderProcessor;
+package com.kodilla.good.patterns.Food2Door.orderprocessor;
 
-import com.kodilla.good.patterns.Food2Door.informationService.InformationService;
+import com.kodilla.good.patterns.Food2Door.informationservice.InformationService;
 import com.kodilla.good.patterns.Food2Door.purchase.PurchaseDto;
 import com.kodilla.good.patterns.Food2Door.purchase.repository.PurchaseRepository;
 import com.kodilla.good.patterns.Food2Door.purchase.PurchaseRequest;

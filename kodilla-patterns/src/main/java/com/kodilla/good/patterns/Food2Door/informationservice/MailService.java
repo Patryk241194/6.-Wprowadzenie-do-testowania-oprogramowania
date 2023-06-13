@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.Food2Door.informationService;
+package com.kodilla.good.patterns.Food2Door.informationservice;
 
 
 import com.kodilla.good.patterns.Food2Door.customer.User;

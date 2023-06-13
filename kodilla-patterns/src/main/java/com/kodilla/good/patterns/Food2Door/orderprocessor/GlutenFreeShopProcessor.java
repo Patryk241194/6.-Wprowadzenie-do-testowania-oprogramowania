@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.Food2Door.orderProcessor;
+package com.kodilla.good.patterns.Food2Door.orderprocessor;
 
 import com.kodilla.good.patterns.Food2Door.customer.User;
 import com.kodilla.good.patterns.Food2Door.products.Product;

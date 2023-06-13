@@ -6,7 +6,7 @@ import com.kodilla.good.patterns.Food2Door.products.ProductImplementation;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.ExtraFoodShopList.*;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.ExtraFoodShopList.*;
 
 public class ExtraFoodShop implements Supplier {
     private final String name = "ExtraFoodShop";

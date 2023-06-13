@@ -25,10 +25,6 @@ public class User {
         return name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
     public Integer getPhoneNumber() {
         return phoneNumber;
     }

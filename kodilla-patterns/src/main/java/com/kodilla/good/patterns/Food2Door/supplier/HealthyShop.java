@@ -6,12 +6,12 @@ import com.kodilla.good.patterns.Food2Door.products.ProductImplementation;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.HealthyShopList.CATEGORY_1;
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.HealthyShopList.CATEGORY_2;
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.HealthyShopList.PRODUCT_1;
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.HealthyShopList.PRODUCT_2;
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.HealthyShopList.PRODUCT_3;
-import static com.kodilla.good.patterns.Food2Door.products.listOfCategoriesAndProducts.HealthyShopList.PRODUCT_4;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.HealthyShopList.CATEGORY_1;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.HealthyShopList.CATEGORY_2;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.HealthyShopList.PRODUCT_1;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.HealthyShopList.PRODUCT_2;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.HealthyShopList.PRODUCT_3;
+import static com.kodilla.good.patterns.Food2Door.products.productcatalog.HealthyShopList.PRODUCT_4;
 
 public class HealthyShop implements Supplier {
     private final String name = "HealthyShop";

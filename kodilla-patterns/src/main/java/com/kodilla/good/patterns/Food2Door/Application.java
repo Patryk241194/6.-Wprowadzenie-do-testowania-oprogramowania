@@ -1,15 +1,16 @@
 package com.kodilla.good.patterns.Food2Door;
 
 import com.kodilla.good.patterns.Food2Door.customer.User;
-import com.kodilla.good.patterns.Food2Door.informationService.MailService;
-import com.kodilla.good.patterns.Food2Door.orderProcessor.ExtraFoodShopProcessor;
-import com.kodilla.good.patterns.Food2Door.orderProcessor.ProductOrderService;
+import com.kodilla.good.patterns.Food2Door.informationservice.MailService;
+import com.kodilla.good.patterns.Food2Door.orderprocessor.ExtraFoodShopProcessor;
+import com.kodilla.good.patterns.Food2Door.orderprocessor.ProductOrderService;
 import com.kodilla.good.patterns.Food2Door.purchase.PurchaseRequest;
 import com.kodilla.good.patterns.Food2Door.purchase.PurchaseRequestRetriever;
 import com.kodilla.good.patterns.Food2Door.purchase.ShoppingCart;
 import com.kodilla.good.patterns.Food2Door.purchase.repository.ExtraFoodShopPurchaseRepository;
 import com.kodilla.good.patterns.Food2Door.supplier.ExtraFoodShop;
 import com.kodilla.good.patterns.Food2Door.supplier.Supplier;
+
 
 public class Application {
     public static void main(String[] args) {
