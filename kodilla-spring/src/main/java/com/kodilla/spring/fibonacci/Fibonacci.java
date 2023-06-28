@@ -22,4 +22,25 @@ public class Fibonacci {
 
         return currentValue;
     }
+
+    public int calculateFibonacciRecursive(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("'n' must be a non-negative integer.");
+        }
+
+        if (n <= 1) {
+            return n;
+        }
+
+        return fibonacciSequence(n);
+    }
+
+    private int fibonacciSequence(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        return fibonacciSequence(n - 1) + fibonacciSequence(n - 2);
+    }
 }
+
