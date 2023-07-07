@@ -32,15 +32,7 @@ public class Fibonacci {
             return n;
         }
 
-        return fibonacciSequence(n);
-    }
-
-    private int fibonacciSequence(int n) {
-        if (n <= 1) {
-            return n;
-        }
-
-        return fibonacciSequence(n - 1) + fibonacciSequence(n - 2);
+        return calculateFibonacciRecursive(n - 1) + calculateFibonacciRecursive(n - 2);
     }
 }
 
