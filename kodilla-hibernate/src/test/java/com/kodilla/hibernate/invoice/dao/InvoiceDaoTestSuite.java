@@ -45,6 +45,8 @@ public class InvoiceDaoTestSuite {
         Assertions.assertNotEquals(0, productId1);
         Assertions.assertNotEquals(0, productId2);
         Assertions.assertEquals(2, invoice.getItems().size());
+        Assertions.assertEquals(BigDecimal.valueOf(240.0), invoice.getItems().get(0).getNetValue());
+        Assertions.assertEquals(BigDecimal.valueOf(40.0), invoice.getItems().get(1).getNetValue());
 
         //CleanUp
         productDao.deleteById(productId1);

@@ -13,7 +13,7 @@ public class Item {
     private Invoice invoice;
     private BigDecimal price;
     private int quantity;
-    private BigDecimal value;
+    private BigDecimal netValue;
 
     public Item() {
     }
@@ -22,7 +22,6 @@ public class Item {
         this.product = product;
         this.price = price;
         this.quantity = quantity;
-        this.value = price.multiply(BigDecimal.valueOf(quantity));
     }
 
     @Id
@@ -55,9 +54,9 @@ public class Item {
         return quantity;
     }
 
-    @Column(name = "VALUE")
-    public BigDecimal getValue() {
-        return value;
+    @Transient
+    public BigDecimal getNetValue() {
+        return price.multiply(BigDecimal.valueOf(quantity));
     }
 
     private void setId(int id) {
@@ -80,7 +79,7 @@ public class Item {
         this.quantity = quantity;
     }
 
-    private void setValue(BigDecimal value) {
-        this.value = value;
+    private void setNetValue(BigDecimal netValue) {
+        this.netValue = netValue;
     }
 }
