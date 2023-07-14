@@ -21,8 +21,14 @@ public class MinMaxValueFinder {
             throw new IllegalArgumentException("Array has less than 2 numbers");
         }
 
-        int maxValue1 = Math.max(arrayOfNumbers[0], arrayOfNumbers[1]);
-        int maxValue2 = Math.min(arrayOfNumbers[0], arrayOfNumbers[1]);
+        int maxValue1 = arrayOfNumbers[0];
+        int maxValue2 = arrayOfNumbers[1];
+
+        if (maxValue2 > maxValue1) {
+            int tempValue = maxValue1;
+            maxValue1 = maxValue2;
+            maxValue2 = tempValue;
+        }
 
         for (int i = 2; i < arrayOfNumbers.length; i++) {
             if (arrayOfNumbers[i] > maxValue1) {
@@ -55,8 +61,14 @@ public class MinMaxValueFinder {
             throw new IllegalArgumentException("Array has less than 2 numbers");
         }
 
-        int minValue1 = Math.min(arrayOfNumbers[0], arrayOfNumbers[1]);
-        int minValue2 = Math.max(arrayOfNumbers[0], arrayOfNumbers[1]);
+        int minValue1 = arrayOfNumbers[0];
+        int minValue2 = arrayOfNumbers[1];
+
+        if (minValue2 < minValue1) {
+            int tempValue = minValue1;
+            minValue1 = minValue2;
+            minValue2 = tempValue;
+        }
 
         for (int i = 2; i < arrayOfNumbers.length; i++) {
             if (arrayOfNumbers[i] < minValue1) {
