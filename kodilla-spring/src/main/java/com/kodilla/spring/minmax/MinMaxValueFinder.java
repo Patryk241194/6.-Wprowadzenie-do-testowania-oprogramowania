@@ -49,7 +49,7 @@ public class MinMaxValueFinder {
 
         int minValue = arrayOfNumbers[0];
         for (int i = 1; i < arrayOfNumbers.length; i++) {
-            if (arrayOfNumbers[i] < minValue) {
+            if (arrayOfNumbers[i] >= 0 && arrayOfNumbers[i] < minValue) {
                 minValue = arrayOfNumbers[i];
             }
         }
