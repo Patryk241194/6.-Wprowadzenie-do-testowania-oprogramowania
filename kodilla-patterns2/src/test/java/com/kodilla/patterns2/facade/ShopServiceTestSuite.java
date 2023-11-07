@@ -63,7 +63,7 @@ class ShopServiceTestSuite {
     }
 
     @Test
-    public void testShopFacade() {
+    void testShopFacade() {
         OrderDto order = new OrderDto();
         order.addItem(new ItemDto(10L, 2));
         order.addItem(new ItemDto(216L, 1));
